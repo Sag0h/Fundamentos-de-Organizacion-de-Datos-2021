@@ -1,0 +1,6 @@
+1 250.99 Comedia, Romance, Misterio
+Una Novela Comica de Romance
+2 99.99 Comedia
+Novela corta de Comedia
+3 500 Ciencia Ficcion
+Novela Futurista de Ciencia Ficcion

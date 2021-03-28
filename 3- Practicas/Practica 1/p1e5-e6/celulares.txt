@@ -1,0 +1,6 @@
+1 250 marca1 nombre
+15 30 celular de marca 1 64 gb
+2 500 marca2 nombre2
+5 10 celular de marca 2 128 gb
+3 1000 marca3 nombre3
+10 5 celular marca 3 128 gb + auriculares de regalo
