@@ -62,12 +62,12 @@ var
 begin
 	for i:= 1 to cantArchivos do begin
 	    Str(i,icast);
-		assign (deta[i], '/home/sagoh/Escritorio/FOD/EjemplosTeoria/det'+icast); 
+		assign (deta[i], 'det'+icast); 
 		reset( deta[i] );
 		leer( deta[i], reg_det[i] );
 		writeln('se abrio el archivo ', i);
 	end;
-	assign (mae1, '/home/sagoh/Escritorio/FOD/EjemplosTeoria/maestro'); 
+	assign (mae1, 'maestro'); 
 	rewrite (mae1);
 	minimo (reg_det, min, deta);
 	while (min.cod <> valoralto) do begin
