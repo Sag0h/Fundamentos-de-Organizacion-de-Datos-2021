@@ -1,0 +1,1 @@
+Nombre: NombreRandom1 - Apellido: ApellidoRandom1 - Codigo de Alumno: 1 - Aprobadas solo cursada: 16 - Aprobadas con final: 0.

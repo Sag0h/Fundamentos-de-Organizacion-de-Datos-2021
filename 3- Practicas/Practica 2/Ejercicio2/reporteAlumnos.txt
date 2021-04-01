@@ -1,0 +1,2 @@
+Nombre: NombreRandom1 - Apellido: ApellidoRandom1 - Codigo de Alumno: 1 - Aprobadas solo cursada: 0 - Aprobadas con final: 0.
+Nombre: NombreRandom2 - Apellido: ApellidoRandom2 - Codigo de Alumno: 2 - Aprobadas solo cursada: 0 - Aprobadas con final: 0.

@@ -1,0 +1,17 @@
+Codigo de alumno: 1 - Materia: materiaRandom8 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom10 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom9 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom8 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom6 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom9 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom6 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom13 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom14 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom5 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom11 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom7 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom8 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom13 Aprobo  cursada.
+Codigo de alumno: 1 - Materia: materiaRandom1 Aprobo  final.
+Codigo de alumno: 1 - Materia: materiaRandom1 Aprobo  cursada.
+Codigo de alumno: 2 - Materia: materiaRandom0 Aprobo  final.
