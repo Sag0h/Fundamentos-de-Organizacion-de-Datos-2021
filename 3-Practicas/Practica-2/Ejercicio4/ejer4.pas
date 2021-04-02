@@ -90,17 +90,27 @@ var
 	minCod:integer;
 	minPos:integer;
 	
+	minDia:integer;
+	minMes:integer;
+	minAnio:integer;
 begin
+	minDia:=31;
+	minMes:=12;
+	minAnio:=2050;
+	
 	minPos:=1;
     minCod:=32767;
     for i:= 1 to dimF do begin    	
-		if(reg_det[i].cod_usuario < minCod)then begin
+		if(reg_det[i].cod_usuario <= minCod)and(reg_det[i].fecha.dia <= minDia)and(reg_det[i].fecha.mes <= minMes)and(reg_det[i].fecha.anio <= minAnio)then begin
 				min := reg_det[i];
 				minCod := reg_det[i].cod_usuario;
 				minPos := i;
+				
+				minDia := reg_det[i].fecha.dia;
+				minMes := reg_det[i].fecha.mes;
+				minAnio := reg_det[i].fecha.anio;
 		end;
 	end;
-	writeln('Se determino un minimo.');
 	leer(deta[minPos], reg_det[minPos]);
 	
 end;   
@@ -120,7 +130,6 @@ begin
 		assign (detalles[i], 'detalle'+icast); 
 		reset( detalles[i] );
 		leer( detalles[i], reg_det[i] );
-		writeln('Se abrio el archivo detalle ', i,'.');
 	end; 
 	
 	
@@ -128,13 +137,14 @@ begin
 	
 	minimo (reg_det, min, detalles);
 	while (min.cod_usuario <> VALOR_ALTO) do begin
-       regm.cod_usuario := min.cod_usuario;
-       regm.tiempo_total_de_sesiones_abiertas := 0;
-       while (regm.cod_usuario = min.cod_usuario ) do begin
-         regm.tiempo_total_de_sesiones_abiertas := regm.tiempo_total_de_sesiones_abiertas + min.tiempo_sesion;
-         minimo (reg_det, min, detalles);
-       end;
-       write(a, regm);
+		regm.cod_usuario := min.cod_usuario;
+		regm.fecha := min.fecha;
+		regm.tiempo_total_de_sesiones_abiertas := 0;
+		while (regm.cod_usuario = min.cod_usuario)and(regm.fecha.dia = min.fecha.dia)and(regm.fecha.mes = min.fecha.mes)and(regm.fecha.anio = min.fecha.anio)do begin
+			regm.tiempo_total_de_sesiones_abiertas := regm.tiempo_total_de_sesiones_abiertas + min.tiempo_sesion;
+			minimo (reg_det, min, detalles);
+		end;
+		write(a, regm);
      end;    
 	for i:= 1 to dimF do begin
 		close(detalles[i]);
@@ -158,7 +168,7 @@ begin
 	reset(maestro);
 	while(not eof(maestro))do begin
 		read(maestro, regm);
-		writeln('codigo de usuario: ', regm.cod_usuario, ' tiempo total: ', regm.tiempo_total_de_sesiones_abiertas);
+		writeln('Fecha: ', regm.fecha.dia, '-', regm.fecha.mes, '-', regm.fecha.anio, ' - '  , 'Codigo de usuario: ', regm.cod_usuario, ' tiempo total: ', regm.tiempo_total_de_sesiones_abiertas);
 	end;
 	close(maestro);
 end.
