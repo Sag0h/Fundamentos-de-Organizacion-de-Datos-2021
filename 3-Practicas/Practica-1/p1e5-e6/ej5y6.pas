@@ -22,8 +22,8 @@ var
 begin
 	write('Ingrese nombre del archivo a crear: ');
 	readln(nombre);
-	Assign(a, '/home/sagoh/Escritorio/FOD/Practica/p1e5/'+nombre);
-	Assign(txt, '/home/sagoh/Escritorio/FOD/Practica/p1e5/celulares.txt');
+	Assign(a, nombre);
+	Assign(txt, 'celulares.txt');
 	reset(txt);
 	rewrite(a);
 	while(not eof(txt))do begin
@@ -88,7 +88,7 @@ var
 	cel:celular;
 begin
     writeln('Exportando de ', nombre, ' a celular.txt.');
-	Assign(txt, '/home/sagoh/Escritorio/FOD/Practica/p1e5/celular.txt');
+	Assign(txt, 'celular.txt');
 	rewrite(txt);
 	reset(a);
 	while(not eof(a))do begin
@@ -182,7 +182,7 @@ var
 	cel:celular;
 	sinStock:Text;
 begin
-	Assign(sinStock, '/home/sagoh/Escritorio/FOD/Practica/p1e5/SinStock.txt');
+	Assign(sinStock, 'SinStock.txt');
 	rewrite(sinStock);
 	reset(a);
 	while(not eof(a))do begin
