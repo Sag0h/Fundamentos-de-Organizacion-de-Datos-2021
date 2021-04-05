@@ -1,0 +1,17 @@
+INFORMACION DE ACTAS DE NACIMIENTO Y FALLECIMIENTOS:
+ 
+ 
+Nro de partida de nacimiento: 1
+ Nombre: a Apellido: a
+Direccion: calle: 1 numero: 1 piso: 1 depto: 1 ciudad la plata
+ matricula del medico nacimiento: 1
+ nombre de la madre: 1 apellido de la madre: 1 dni de la madre: 1
+ nombre del padre: 1 apellido del padre: 1 dni del padre: 1
+ 
+Nro de partida de nacimiento: 2
+ Nombre: 2 Apellido: 2
+Direccion: calle: 2 numero: 2 piso: 2 depto: 2 ciudad 2
+ matricula del medico nacimiento: 2
+ nombre de la madre: 2 apellido de la madre: 2 dni de la madre: 2
+ nombre del padre: 2 apellido del padre: 2 dni del padre: 2
+ matricula del medico que firmo el deceso: 2 fecha de deceso: 2 hora de deceso: 2 lugar de deceso: 2

@@ -327,8 +327,36 @@ begin
 	close(a);
 end;
 
+{=============================================================================================================================================================}
 
-
+procedure listarText(var a:archivo; var txt:Text);
+var
+	regm :informacion;
+begin
+	assign(txt, 'archivodetexto.txt');
+	reset(a);
+	rewrite(txt);
+	writeln(txt, 'INFORMACION DE ACTAS DE NACIMIENTO Y FALLECIMIENTOS:');
+	while(not eof(a))do begin
+		writeln(txt, ' ');
+		read(a, regm);
+		with regm do begin
+			writeln('ACTA DE NACIMIENTO: ');
+			writeln(txt,'Nro de partida de nacimiento: ' ,regm.nro_partida_nacimiento);
+			writeln(txt,' Nombre: ',regm.nombre,' Apellido: ',regm.apellido);
+			writeln(txt,'Direccion:', ' calle: ',regm.dir.calle,' numero: ',regm.dir.nro,' piso: ',regm.dir.piso,' depto: ' ,regm.dir.depto,' ciudad ',regm.dir.ciudad);
+			writeln(txt,' matricula del medico nacimiento: ',regm.matricula_medico);
+			writeln(txt, ' nombre de la madre: ',regm.nombre_madre,' apellido de la madre: ',regm.apellido_madre,' dni de la madre: ',regm.dni_madre);
+			writeln(txt,' nombre del padre: ',regm.nombre_padre,' apellido del padre: ',regm.apellido_padre,' dni del padre: ',regm.dni_padre); 
+			if(regm.fallecio)then
+				writeln(txt, 'ACTA DE FALLECIMIENTO: ');
+				writeln(txt,' matricula del medico que firmo el deceso: ',regm.matricula_medico_deceso,' fecha de deceso: ' ,regm.fecha_deceso,' hora de deceso: ',regm.hora_deceso,' lugar de deceso: ',regm.lugar_deceso);
+ 
+		end;
+	end;
+	close(a);
+	close(txt);
+end;
 
 {=============================================================================================================================================================}
 
@@ -336,12 +364,12 @@ var
 	detalles_nacimientos: arreglo_nacimientos;
 	detalles_fallecimientos: arreglo_fallecimientos;
 	maestro : archivo;
-	regm : informacion;
+	txt : Text;
 begin
 	assign(maestro, 'maestro');
 	
 	leer_detalles_nacimientos(detalles_nacimientos);
 	leer_detalles_fallecimientos(detalles_fallecimientos);
 	merge_archivos(maestro, detalles_nacimientos,detalles_fallecimientos);
-	reset(maestro);
+	listarText(maestro, txt);
 end.

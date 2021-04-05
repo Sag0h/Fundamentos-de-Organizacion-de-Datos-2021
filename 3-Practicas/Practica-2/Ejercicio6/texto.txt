@@ -1,0 +1,2 @@
+Nombre de articulo: 1 descripcion: 1 - stock disponible: 40 - $250.00.
+Nombre de articulo: 4 descripcion: 4 - stock disponible: 49 - $600.00.
