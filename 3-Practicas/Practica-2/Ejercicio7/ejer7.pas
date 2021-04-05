@@ -51,7 +51,7 @@ begin
 	rewrite(txt);
 	while(not eof(a))do begin
 		read(a, p);
-		writeln(txt,'Codigo de producto: ', p.cod ,' Nombre de producto: ', p.nombre, ' Precio: ', p.precio, ' Stock actual: ', p.stock, ' Stock minimo: ', p.stock);
+		writeln(txt,'Codigo de producto: ', p.cod ,' Nombre de producto: ', p.nombre, ' Precio: $', p.precio:2:2, ' Stock actual: ', p.stock, ' Stock minimo: ', p.stock);
 	end;
 	close(txt);
 	close(a);

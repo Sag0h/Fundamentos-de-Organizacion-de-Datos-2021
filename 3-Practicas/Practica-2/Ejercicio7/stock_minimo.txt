@@ -1,0 +1,2 @@
+Codigo de producto: 2 nombre de producto: producto2 stock minimo: 30 - stock disponible: 25 - $1000.00.
+Codigo de producto: 3 nombre de producto: producto3 stock minimo: 50 - stock disponible: 49 - $2000.00.

@@ -1,0 +1,3 @@
+Codigo de producto: 1 Nombre de producto: producto1 Precio: $500.00 Stock actual: 50 Stock minimo: 50
+Codigo de producto: 2 Nombre de producto: producto2 Precio: $1000.00 Stock actual: 25 Stock minimo: 25
+Codigo de producto: 3 Nombre de producto: producto3 Precio: $2000.00 Stock actual: 50 Stock minimo: 50
