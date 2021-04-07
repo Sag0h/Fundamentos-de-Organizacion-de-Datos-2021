@@ -1,0 +1,2 @@
+Destination: La Plata - Date:1/1/1 <-(y-m-d) - Departure time: 1:0
+Destination: Toronto - Date:2/1/1 <-(y-m-d) - Departure time: 12:20
