@@ -203,8 +203,8 @@ begin
 	reset(master);
 	while(not eof(master))do begin
 		read(master, recM);
-		writeln('dni: ',recM.dni_student,' - career code: ', recM.career_cod,' -
-		 total amount paid: $',recM.total_amount_paid:2:2);
+		writeln('dni: ',recM.dni_student,' - career code: ', recM.career_cod,
+		' - total amount paid: $',recM.total_amount_paid:2:2);
 	end;
 	close(master);
     assign(txt, 'slowpayer.txt');

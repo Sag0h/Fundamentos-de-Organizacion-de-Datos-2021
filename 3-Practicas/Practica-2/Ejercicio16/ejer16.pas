@@ -229,6 +229,7 @@ begin
         else 
             if(rec_master.total_copies_sold <= min_sales.total_copies_sold)then
                 min_sales := rec_master; 
+                
     end;
     close(master);
     
