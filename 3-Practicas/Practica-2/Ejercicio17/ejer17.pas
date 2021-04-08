@@ -29,7 +29,7 @@ type
 
     array_of_sales = array [1..amount_of_details] of sale;
     array_of_details = array [1..amount_of_details] of detail_file;
-    
+
 {=================================================================================================================}
 
 procedure read_date(var date: calendar);
@@ -202,6 +202,7 @@ begin
 end;
 
 {==================================================================================================================}
+
 {main}
 
 var
