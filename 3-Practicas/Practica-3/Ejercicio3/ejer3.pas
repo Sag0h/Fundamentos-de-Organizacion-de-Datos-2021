@@ -76,7 +76,6 @@ procedure show_maintenance_menu(var f:novel_file);
                 seek(f, filepos(f)-1);
                 write(f, n);
                 seek(f, 0);
-                aux_novel.code := aux_novel.code;
                 write(f, aux_novel);             
             end
             else begin
@@ -211,7 +210,8 @@ procedure show_maintenance_menu(var f:novel_file);
             seek(f, filepos(f)-1);
             write(f, n);
             seek(f, 0);
-            n.code := head;
+            n.code := head; {uso el mismo record para pasar el valor de head, a la head}
+            {se ve raro pero es para no crear un auxiliar}
             write(f, n);
             writeln('The novel was succesfully removed!');
         end
