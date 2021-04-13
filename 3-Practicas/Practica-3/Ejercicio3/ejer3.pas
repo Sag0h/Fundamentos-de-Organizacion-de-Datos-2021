@@ -35,8 +35,12 @@ end;
 procedure create_file(var f:novel_file);
 var
     d:novel;
+    str:string;
 begin
     writeln('================== CREATING FILE ===================');
+    write('ENTER FILE PATH AND FILE NAME: ');
+    readln(str);
+    assign(f, str);
     rewrite(f);
     d.code := 0;
     write(f, d);
@@ -54,9 +58,14 @@ end;
 procedure show_maintenance_menu(var f:novel_file);
     procedure register_novel(var f:novel_file);
     var
+        str:string;
         n:novel;
         aux_novel:novel;
     begin
+        write('ENTER FILE PATH AND FILE NAME: ');
+        readln(str);
+        assign(f, str);
+
         read_novel(n);
         if(n.code > 0)then begin
             reset(f);
@@ -154,8 +163,12 @@ procedure show_maintenance_menu(var f:novel_file);
     var
         cod: integer;
         nov:novel;
+        str:string;
     begin
         writeln();
+        write('ENTER FILE PATH AND FILE NAME: ');
+        readln(str);
+        assign(f, str);
         write('Enter a novel code to modify: ');
         readln(cod);
         reset(f);
@@ -178,8 +191,12 @@ procedure show_maintenance_menu(var f:novel_file);
         cod: integer;
         head : integer;
         n : novel;
+        str:string;
     begin
         writeln();
+        write('ENTER FILE PATH AND FILE NAME: ');
+        readln(str);
+        assign(f, str);
         write('Enter a code of novel to remove from file: ');
         readln(cod);
         reset(f);
@@ -260,7 +277,7 @@ begin
     writeln('   3. List novel file into a text file. ');
     writeln('   4. Exit.');
     writeln();
-    write('Enter an option:');
+    write('Enter an option: ');
     readln(option);
     writeln('====================================================');
     case option of
@@ -291,6 +308,5 @@ end;
 var
     f:novel_file;
 begin
-    assign(f, 'novels_file');
     show_menu(f);
 end.
